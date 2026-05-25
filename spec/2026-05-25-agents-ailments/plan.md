@@ -55,3 +55,16 @@ Add write capability: create, update, delete ailments.
 - [ ] Server Action: remove an ailment from an agent
 - [ ] Form UI on the agent detail page for each action
 - [ ] Revalidate the detail page after each mutation (`revalidatePath`)
+
+---
+
+## 6. Layout component extraction
+
+Extract the shell layout into composable subcomponents backed by a dedicated CSS file.
+
+- [ ] Create `app/components/layout/layout.css` with all layout-specific styles (header, footer, sidebar, main, body shell)
+- [ ] Create `app/components/layout/SiteHeader.tsx` — top nav bar subcomponent
+- [ ] Create `app/components/layout/SiteMain.tsx` — sidebar + content area subcomponent
+- [ ] Create `app/components/layout/SiteFooter.tsx` — footer subcomponent
+- [ ] Refactor `app/layout.tsx` to import `layout.css` and compose the three subcomponents
+- [ ] Confirm `pnpm build` exits 0 with no type errors
