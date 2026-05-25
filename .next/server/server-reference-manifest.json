@@ -1,1 +1,5 @@
-{"node":{"407bf545a710a8c296552dae765028724be2b67a4e":{"workers":{"app/agents/[id]/page":{"moduleId":"4299","async":false}},"layer":{"app/agents/[id]/page":"rsc"},"filename":"app/actions/ailment.ts","exportedName":"addAilment"},"407eef15e7c5d0f67b3920a7a04821824743a3d28d":{"workers":{"app/agents/[id]/page":{"moduleId":"4299","async":false}},"layer":{"app/agents/[id]/page":"rsc"},"filename":"app/actions/ailment.ts","exportedName":"editAilment"},"40ff6a8931f9e45985f794b7cac9eb54ad04516c1d":{"workers":{"app/agents/[id]/page":{"moduleId":"4299","async":false}},"layer":{"app/agents/[id]/page":"rsc"},"filename":"app/actions/ailment.ts","exportedName":"removeAilment"}},"edge":{},"encryptionKey":"a8hHK1CeSiY0cHfqU/E630YDfN077tWPKiKzHDDLAN0="}
+{
+  "node": {},
+  "edge": {},
+  "encryptionKey": "a8hHK1CeSiY0cHfqU/E630YDfN077tWPKiKzHDDLAN0="
+}
