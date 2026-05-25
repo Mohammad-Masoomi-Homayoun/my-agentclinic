@@ -13,10 +13,11 @@ This phase delivers the core data model and the read/write UI for agents and the
 ### In scope
 - Prisma schema for `Agent` and `Ailment`
 - Seed data (sample agents with ailments)
-- Agent list page (dashboard)
-- Agent detail page (profile + ailment list)
+- Minimal home page (`/`) — clinic name, tagline, link to agents
+- Shared Tailwind layout: top nav, sidebar, content area
+- Agent list page (`/agents`)
+- Agent detail page (`/agents/[id]`) — profile + ailment list
 - Add, edit, and remove an ailment for an agent
-- Basic Tailwind layout: nav, sidebar, content area
 
 ### Out of scope
 - Therapies, appointments, booking flows

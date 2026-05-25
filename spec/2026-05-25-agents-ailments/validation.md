@@ -41,4 +41,5 @@ Run these before opening the PR:
 - [ ] `pnpm prisma validate` exits 0
 - [ ] `pnpm prisma db seed` exits 0
 - [ ] No `// @ts-ignore` or `any` casts introduced
+- [ ] Home page (`/`) renders without errors (confirmed by build output)
 - [ ] All plan.md tasks checked off

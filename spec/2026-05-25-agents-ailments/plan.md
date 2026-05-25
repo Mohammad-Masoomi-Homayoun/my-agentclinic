@@ -27,18 +27,26 @@ Populate the database with enough data to develop and demo against.
 
 ---
 
-## 3. Pages
+## 3. Home page & layout
+
+Establish the shared site shell and a minimal entry point.
+
+- [ ] Create Tailwind shell in `app/layout.tsx`: top nav with clinic name, sidebar, main content area
+- [ ] `app/page.tsx` — home page: clinic name, one-line tagline, and a "View agents" link to `/agents`
+
+---
+
+## 4. Agent pages
 
 Build the read-only UI — list and detail views.
 
-- [ ] Create basic Tailwind shell: top nav, sidebar, main content area (shared layout in `app/layout.tsx`)
 - [ ] `app/agents/page.tsx` — agent list: table of all agents showing name and model
 - [ ] `app/agents/[id]/page.tsx` — agent detail: name, model, and list of ailments with severity badges
 - [ ] Wire pages to Prisma queries (server components, no client fetch)
 
 ---
 
-## 4. CRUD actions
+## 5. CRUD actions
 
 Add write capability: create, update, delete ailments.
 
