@@ -1,0 +1,29 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Severity {
+  mild
+  moderate
+  severe
+}
+
+model Agent {
+  id       String    @id @default(cuid())
+  name     String
+  model    String
+  ailments Ailment[]
+}
+
+model Ailment {
+  id       String   @id @default(cuid())
+  name     String
+  severity Severity
+  agentId  String
+  agent    Agent    @relation(fields: [agentId], references: [id], onDelete: Cascade)
+}
