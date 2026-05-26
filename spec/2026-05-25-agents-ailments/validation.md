@@ -28,9 +28,18 @@ Run these before opening the PR:
 
 ## What is explicitly not required
 
-- Browser / manual walkthrough — deferred to a later phase when auth and multi-role views make a full walkthrough meaningful.
+- Full browser / manual walkthrough — deferred to a later phase when auth and multi-role views make it meaningful.
 - Automated UI tests (Playwright, Cypress) — out of scope for Phase 1.
 - Screenshot review or visual regression — not required until the design is more settled.
+
+## Responsive layout verification
+
+Manually resize the browser (or use DevTools device emulation) and confirm:
+
+| Viewport | Expected behaviour |
+|---|---|
+| < 640 px (mobile) | Sidebar hidden; content fills full width; agents table scrolls horizontally; ailment list items wrap to multiple lines |
+| ≥ 640 px (desktop) | Sidebar visible at 12 rem; content area beside sidebar; table and forms display in single row |
 
 ---
 
@@ -43,3 +52,4 @@ Run these before opening the PR:
 - [ ] No `// @ts-ignore` or `any` casts introduced
 - [ ] Home page (`/`) renders without errors (confirmed by build output)
 - [ ] All plan.md tasks checked off
+- [ ] Responsive layout verified: sidebar hidden at <640 px, content readable, tables scrollable on mobile

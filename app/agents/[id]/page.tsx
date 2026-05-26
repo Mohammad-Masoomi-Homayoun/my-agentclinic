@@ -36,24 +36,28 @@ export default async function AgentDetailPage({
         ) : (
           <ul className="divide-y divide-gray-100">
             {agent.ailments.map((ailment) => (
-              <li key={ailment.id} className="py-3 flex items-center gap-4">
-                <span className="flex-1 text-sm font-medium">{ailment.name}</span>
-                <span
-                  className={`text-xs px-2 py-0.5 rounded-full font-medium ${severityStyles[ailment.severity]}`}
-                >
-                  {ailment.severity}
-                </span>
-                <EditAilmentForm ailment={ailment} />
-                <form action={removeAilment}>
-                  <input type="hidden" name="ailmentId" value={ailment.id} />
-                  <input type="hidden" name="agentId" value={agent.id} />
-                  <button
-                    type="submit"
-                    className="text-xs text-red-600 hover:underline"
+              <li key={ailment.id} className="py-3 flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-4">
+                <div className="flex items-center gap-3 sm:contents">
+                  <span className="flex-1 text-sm font-medium">{ailment.name}</span>
+                  <span
+                    className={`text-xs px-2 py-0.5 rounded-full font-medium ${severityStyles[ailment.severity]}`}
                   >
-                    Remove
-                  </button>
-                </form>
+                    {ailment.severity}
+                  </span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <EditAilmentForm ailment={ailment} />
+                  <form action={removeAilment}>
+                    <input type="hidden" name="ailmentId" value={ailment.id} />
+                    <input type="hidden" name="agentId" value={agent.id} />
+                    <button
+                      type="submit"
+                      className="text-xs text-red-600 hover:underline"
+                    >
+                      Remove
+                    </button>
+                  </form>
+                </div>
               </li>
             ))}
           </ul>
@@ -62,7 +66,7 @@ export default async function AgentDetailPage({
 
       <section>
         <h2 className="text-lg font-semibold mb-4">Add ailment</h2>
-        <form action={addAilment} className="flex flex-col gap-3 max-w-sm">
+        <form action={addAilment} className="flex flex-col gap-3 w-full sm:max-w-sm">
           <input type="hidden" name="agentId" value={agent.id} />
           <input
             name="name"

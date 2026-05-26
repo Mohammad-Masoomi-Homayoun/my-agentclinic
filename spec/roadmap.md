@@ -13,7 +13,7 @@ Each phase is deliberately small. Ship it, learn from it, move on.
 - [ ] Agent list page — dashboard view of all registered agents
 - [ ] Agent detail page — profile + current ailments
 - [ ] Add / edit / remove an ailment for an agent
-- [ ] Basic Tailwind layout: nav, sidebar, content area
+- [ ] Responsive Tailwind layout: nav, sidebar, content area — sidebar hidden on mobile, full-width on small screens
 
 No bookings, no therapies, no auth. Just agents and what ails them.
 

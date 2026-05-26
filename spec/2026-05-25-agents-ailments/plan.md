@@ -33,6 +33,8 @@ Establish the shared site shell and a minimal entry point.
 
 - [ ] Create Tailwind shell in `app/layout.tsx`: top nav with clinic name, sidebar, main content area
 - [ ] `app/page.tsx` — home page: clinic name, one-line tagline, and a "View agents" link to `/agents`
+- [ ] Add responsive media queries to `layout.css`: sidebar hidden on mobile (<640 px), reduced padding on small screens
+- [ ] Apply Tailwind `sm:` responsive classes to page content: table overflow-scrollable on mobile, ailment list items wrap on narrow viewports
 
 ---
 
@@ -68,3 +70,4 @@ Extract the shell layout into composable subcomponents backed by a dedicated CSS
 - [ ] Create `app/components/layout/SiteFooter.tsx` — footer subcomponent
 - [ ] Refactor `app/layout.tsx` to import `layout.css` and compose the three subcomponents
 - [ ] Confirm `pnpm build` exits 0 with no type errors
+- [ ] Verify responsive layout: sidebar hidden at <640 px, content readable, tables scrollable, forms usable

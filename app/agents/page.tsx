@@ -14,6 +14,7 @@ export default async function AgentsPage() {
       {agents.length === 0 ? (
         <p className="text-gray-500">No agents found. Run the seed to populate the database.</p>
       ) : (
+        <div className="overflow-x-auto">
         <table className="w-full text-sm border-collapse">
           <thead>
             <tr className="border-b border-gray-200 text-left text-gray-500">
@@ -40,6 +41,7 @@ export default async function AgentsPage() {
             ))}
           </tbody>
         </table>
+        </div>
       )}
     </div>
   );

@@ -14,10 +14,11 @@ This phase delivers the core data model and the read/write UI for agents and the
 - Prisma schema for `Agent` and `Ailment`
 - Seed data (sample agents with ailments)
 - Minimal home page (`/`) — clinic name, tagline, link to agents
-- Shared Tailwind layout: top nav, sidebar, content area
+- Shared responsive Tailwind layout: top nav, sidebar, content area
 - Agent list page (`/agents`)
 - Agent detail page (`/agents/[id]`) — profile + ailment list
 - Add, edit, and remove an ailment for an agent
+- Responsive layout: all pages usable on mobile and desktop (sidebar hidden below the `sm` breakpoint; tables horizontally scrollable; forms and ailment list items wrap gracefully on narrow viewports)
 
 ### Out of scope
 - Therapies, appointments, booking flows
@@ -56,6 +57,7 @@ Relation: one Agent has many Ailments. Deleting an agent cascades to its ailment
 - **No API route layer for Phase 1.** Mutations use Next.js Server Actions directly from the form components — the Route Handler pattern (`app/api/`) is reserved for when an external consumer exists.
 - **Prisma cuid() for IDs.** Consistent with Prisma conventions; avoids auto-increment integers leaking record counts in URLs.
 - **Severity as a Prisma enum, not a free-text field.** Enforces valid values at the DB and TypeScript layers simultaneously.
+- **Responsive via Tailwind breakpoints + CSS media queries.** The sidebar and padding adjustments live in `layout.css` behind an `@media (max-width: 639px)` block; page-level elements (tables, ailment list items, forms) use Tailwind's `sm:` prefix to layer desktop styles on top of mobile defaults.
 
 ---
 

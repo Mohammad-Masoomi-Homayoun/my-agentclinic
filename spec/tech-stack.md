@@ -12,6 +12,8 @@ AgentClinic is a TypeScript-first web application. Every layer uses TypeScript; 
 
 Next.js gives us full-stack TypeScript in a single repo, file-based routing, and first-class support for server-rendered dashboards — exactly what the clinic's staff view needs.
 
+All layouts are responsive. Tailwind's mobile-first breakpoints (`sm:`, `md:`, `lg:`) govern spacing and visibility. The sidebar collapses on screens narrower than the `sm` breakpoint (640 px); tables and forms adapt to fill the available width.
+
 ## Backend
 
 | Concern | Choice |
