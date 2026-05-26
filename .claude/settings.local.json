@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git -C /Users/nlmxm4200/Desktop/AI-SDD/sc-spec-driven-development-files/my-agentclinic log --pretty=format:\"%ad|%s\" --date=short)",
+      "Bash(mkdir -p /Users/nlmxm4200/Desktop/AI-SDD/sc-spec-driven-development-files/my-agentclinic/.claude/commands)",
+      "Bash(git -C /Users/nlmxm4200/Desktop/AI-SDD/sc-spec-driven-development-files/my-agentclinic log --pretty=format:\"%ad|%H|%s\" --date=short)"
+    ],
+    "additionalDirectories": [
+      "/Users/nlmxm4200/Desktop/AI-SDD/sc-spec-driven-development-files/my-agentclinic/.claude"
+    ]
+  }
+}
