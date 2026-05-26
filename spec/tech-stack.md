@@ -29,6 +29,15 @@ Prisma provides a type-safe query layer that stays in sync with the schema; the 
 | Hosting | **Vercel** |
 | Database | Vercel Postgres (dev) / any managed Postgres (prod) |
 
+## Testing
+
+| Concern | Choice |
+|---|---|
+| Test runner | **Vitest** |
+| Scope | Validation tests that assert spec requirements are met |
+
+Vitest runs phase validation scripts that confirm database state, API responses, and UI structure match the spec before a phase is considered complete. Run with `pnpm test`.
+
 ## Development tooling
 
 - **pnpm** — package manager
